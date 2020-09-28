@@ -227,7 +227,7 @@ del 语句
 集合
 集合是一个无序不重复元素的集。基本功能包括关系测试和消除重复元素。
 
-可以用大括号({})创建集合。注意：如果要创建一个空集合，你必须用 set() 而不是 {} ；后者创建一个空的字典，下一节我们会介绍这个数据结构。
+可以用大括号({})创建b集合。注意：如果要创建一个空集合，你必须用 set() 而不是 {} ；后者创建一个空的字典，下一节我们会介绍这个数据结构。
 
 以下是一个简单的演示：
 """
@@ -260,4 +260,96 @@ del 语句
 # {'r', 'd'}
 
 
+"""
+字典
+另一个非常有用的 Python 内建数据类型是字典。
+
+序列是以连续的整数为索引，与此不同的是，字典以关键字为索引，关键字可以是任意不可变类型，通常用字符串或数值。
+
+理解字典的最佳方式是把它看做无序的键=>值对集合。在同一个字典之内，关键字必须是互不相同。
+
+一对大括号创建一个空的字典：{}。
+
+这是一个字典运用的简单例子：
+"""
+# >>> tel = {'jack': 4098, 'sape': 4139}
+# >>> tel['guido'] = 4127
+# >>> tel
+# {'sape': 4139, 'guido': 4127, 'jack': 4098}
+# >>> tel['jack']
+# 4098
+# >>> del tel['sape']
+# >>> tel['irv'] = 4127
+# >>> tel
+# {'guido': 4127, 'irv': 4127, 'jack': 4098}
+# >>> list(tel.keys())
+# ['irv', 'guido', 'jack']
+# >>> sorted(tel.keys())
+# ['guido', 'irv', 'jack']
+# >>> 'guido' in tel
+# True
+# >>> 'jack' not in tel
+# False
+# 构造函数 dict() 直接从键值对元组列表中构建字典。如果有固定的模式，列表推导式指定特定的键值对：
+#
+# >>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+# {'sape': 4139, 'jack': 4098, 'guido': 4127}
+# 此外，字典推导可以用来创建任意键和值的表达式词典：
+#
+# >>> {x: x**2 for x in (2, 4, 6)}
+# {2: 4, 4: 16, 6: 36}
+# 如果关键字只是简单的字符串，使用关键字参数指定键值对有时候更方便：
+#
+# >>> dict(sape=4139, guido=4127, jack=4098)
+# {'sape': 4139, 'jack': 4098, 'guido': 4127}
+
+
+"""
+遍历技巧
+在字典中遍历时，关键字和对应的值可以使用 items() 方法同时解读出来：
+"""
+# >>> knights = {'gallahad': 'the pure', 'robin': 'the brave'}
+# >>> for k, v in knights.items():
+# ...     print(k, v)
+# ...
+# gallahad the pure
+# robin the brave
+# 在序列中遍历时，索引位置和对应值可以使用 enumerate() 函数同时得到：
+#
+# >>> for i, v in enumerate(['tic', 'tac', 'toe']):
+# ...     print(i, v)
+# ...
+# 0 tic
+# 1 tac
+# 2 toe
+# 同时遍历两个或更多的序列，可以使用 zip() 组合：
+#
+# >>> questions = ['name', 'quest', 'favorite color']
+# >>> answers = ['lancelot', 'the holy grail', 'blue']
+# >>> for q, a in zip(questions, answers):
+# ...     print('What is your {0}?  It is {1}.'.format(q, a))
+# ...
+# What is your name?  It is lancelot.
+# What is your quest?  It is the holy grail.
+# What is your favorite color?  It is blue.
+# 要反向遍历一个序列，首先指定这个序列，然后调用 reversed() 函数：
+#
+# >>> for i in reversed(range(1, 10, 2)):
+# ...     print(i)
+# ...
+# 9
+# 7
+# 5
+# 3
+# 1
+# 要按顺序遍历一个序列，使用 sorted() 函数返回一个已排序的序列，并不修改原值：
+#
+# >>> basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+# >>> for f in sorted(set(basket)):
+# ...     print(f)
+# ...
+# apple
+# banana
+# orange
+# pear
 
