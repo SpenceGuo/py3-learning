@@ -36,6 +36,11 @@ pickle.dump(selfref_list, output, -1)
 
 output.close()
 
+f = open('data.pkl', 'rb')
+info = pickle.load(f)
+print(info)
+f.close()
+
 
 
 
