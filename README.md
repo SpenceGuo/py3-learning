@@ -1,5 +1,6 @@
-# py3-learning
- 
-##Aim of this project:
-
+py3-learning
+============
+#Test...
+Aim of this project:
+--------------------
 ###Recording
