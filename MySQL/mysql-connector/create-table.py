@@ -18,7 +18,7 @@ cursor.execute(r"CREATE TABLE sites (name VARCHAR(255), url VARCHAR(255))")
 #   host="localhost",
 #   user="root",
 #   passwd="123456",
-#   database="runoob_db"
+#   database="db_test"
 # )
 # mycursor = mydb.cursor()
 #
