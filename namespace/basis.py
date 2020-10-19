@@ -185,9 +185,9 @@ outer()
 # 以上程序执行，报错信息如下：
 #
 # Traceback (most recent call last):
-#   File "test.py", line 7, in <module>
+#   File "Attributes.py", line 7, in <module>
 #     test()
-#   File "test.py", line 5, in test
+#   File "Attributes.py", line 5, in test
 #     a = a + 1
 # UnboundLocalError: local variable 'a' referenced before assignment
 # 错误信息为局部作用域引用错误，因为 test 函数中的 a 使用的是局部，未定义，无法修改。

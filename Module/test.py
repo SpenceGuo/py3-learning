@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Filename: test.py
+# Filename: Attributes.py
 
 # 导入模块
 import support

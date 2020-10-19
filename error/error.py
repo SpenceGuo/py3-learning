@@ -162,7 +162,7 @@ for arg in sys.argv[1:]:
 # 执行以上代码会触发异常：
 #
 # Traceback (most recent call last):
-#   File "test.py", line 3, in <module>
+#   File "Attributes.py", line 3, in <module>
 #     raise Exception('x 不能大于 5。x 的值为: {}'.format(x))
 # Exception: x 不能大于 5。x 的值为: 10
 # raise 唯一的一个参数指定了要被抛出的异常。它必须是一个异常的实例或者是异常的类（也就是 Exception 的子类）。
