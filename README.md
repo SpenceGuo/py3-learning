@@ -1,8 +1,2 @@
-py3-learning
-============
-<br />
+# Python3 learning codes
 
-#Test...
-
-Aim of this project:
---------------------
